@@ -16,9 +16,10 @@ import { Container } from './style'
                 </div>
                 
                 <div className= "inside">
-                    <label> Frete grátis</label>
-                    <button onClick={() => setProducts(overPrice)}> o </button>
-
+                    <div className="freeShippingButton">
+                      <label> Frete grátis</label>
+                      <button onClick={() => setProducts(overPrice)}></button>
+                    </div>
                     {products.items.map((product) => { 
                         return (
                         <div className="products">
@@ -39,9 +40,7 @@ import { Container } from './style'
                            <h3> Total</h3>
                            <span>R${products.value/100}</span>
                         </div>
-                        <div className="discount">
-                            {(products.value/100 )> 10 && <span> Parabéns, sua compra tem frete grátis !</span>}
-                        </div>
+                            {(products.value/100 )> 10 && <span className="discount"> Parabéns, sua compra tem frete grátis !</span>}
                         <hr/>
                         <div>
                             <button>Finalizar compra</button>

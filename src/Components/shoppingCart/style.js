@@ -13,7 +13,13 @@ import styled from "styled-components";
       width: 30vw;
     }
     
-    .inside {
+    .freeShippingButton {
+         display: flex;
+         justify-content: flex-end;
+        button {
+          padding: 5px 5px;
+          margin: 3px;
+        }
     }
 
     .header {
